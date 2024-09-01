@@ -11,14 +11,14 @@ namespace SVUEXAM
     {
         // Connection string - update as needed
         public static readonly string connectionString = @"Data Source=SQL8020.site4now.net;Initial Catalog=db_aac5dd_svuexam;User Id=db_aac5dd_svuexam_admin;Password=Youns@#$123;";
-        public static readonly string LocalconnectionString = @"Data Source=SQL8020.site4now.net;Initial Catalog=db_aac5dd_svuexam;User Id=db_aac5dd_svuexam_admin;Password=Youns@#$123;";
+        public static readonly string LocalDbConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\DRLocalDB.mdf';Integrated Security=True;";
 
         // Method to open and return a new SqlConnection
         public static SqlConnection GetConnection(bool Local)
         {
             if (Local)
             {
-                return new SqlConnection(LocalconnectionString);
+                return new SqlConnection(LocalDbConnectionString);
             }
             else
             {

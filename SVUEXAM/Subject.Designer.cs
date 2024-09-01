@@ -74,11 +74,11 @@
             this.tableLayoutPanel1.Controls.Add(this.sname, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Sdate, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(210, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(141, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(797, 59);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(866, 59);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // sname
@@ -113,7 +113,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 59);
+            this.panel2.Size = new System.Drawing.Size(141, 59);
             this.panel2.TabIndex = 1;
             // 
             // Relode
@@ -123,7 +123,7 @@
             this.Relode.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Relode.Image = global::SVUEXAM.Properties.Resources.icons8_update_50;
             this.Relode.ImageSize = new System.Drawing.Size(50, 50);
-            this.Relode.Location = new System.Drawing.Point(86, 5);
+            this.Relode.Location = new System.Drawing.Point(12, 5);
             this.Relode.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Relode.Name = "Relode";
             this.Relode.OnHoverImage = global::SVUEXAM.Properties.Resources.icons8_update;
@@ -139,7 +139,7 @@
             this.Exit.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Exit.Image = global::SVUEXAM.Properties.Resources.icons8_exit_50;
             this.Exit.ImageSize = new System.Drawing.Size(50, 50);
-            this.Exit.Location = new System.Drawing.Point(148, 5);
+            this.Exit.Location = new System.Drawing.Point(82, 5);
             this.Exit.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Exit.Name = "Exit";
             this.Exit.OnHoverImage = global::SVUEXAM.Properties.Resources.icons8_exit;

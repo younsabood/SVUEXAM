@@ -11,19 +11,27 @@ namespace SVUEXAM
     {
         // Connection string - update as needed
         public static readonly string connectionString = @"Data Source=SQL8020.site4now.net;Initial Catalog=db_aac5dd_svuexam;User Id=db_aac5dd_svuexam_admin;Password=Youns@#$123;";
+        public static readonly string LocalconnectionString = @"Data Source=SQL8020.site4now.net;Initial Catalog=db_aac5dd_svuexam;User Id=db_aac5dd_svuexam_admin;Password=Youns@#$123;";
 
         // Method to open and return a new SqlConnection
-        public static SqlConnection GetConnection()
+        public static SqlConnection GetConnection(bool Local)
         {
-            return new SqlConnection(connectionString);
+            if (Local)
+            {
+                return new SqlConnection(LocalconnectionString);
+            }
+            else
+            {
+                return new SqlConnection(connectionString);
+            }
         }
 
         // General method to execute a non-query (INSERT, UPDATE, DELETE)
-        public static int ExecuteNonQuery(string query, params SqlParameter[] parameters)
+        public static int ExecuteNonQuery(string query, bool Local, params SqlParameter[] parameters)
         {
             try
             {
-                using (SqlConnection connection = GetConnection())
+                using (SqlConnection connection = GetConnection(Local))
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -45,11 +53,11 @@ namespace SVUEXAM
         }
 
         // General method to fetch data using SELECT queries
-        public static async Task<DataTable> ExecuteQueryAsync(string query, params SqlParameter[] parameters)
+        public static async Task<DataTable> ExecuteQueryAsync(string query, bool Local, params SqlParameter[] parameters)
         {
             try
             {
-                using (SqlConnection connection = GetConnection())
+                using (SqlConnection connection = GetConnection(Local))
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -76,7 +84,7 @@ namespace SVUEXAM
 
 
         // Simplified method for inserting data
-        public static int Insert(string tableName, SqlParameter[] parameters)
+        public static int Insert(string tableName, bool Local, SqlParameter[] parameters)
         {
             try
             {
@@ -84,7 +92,7 @@ namespace SVUEXAM
                 string values = string.Join(", ", parameters.Select(p => $"@{p.ParameterName.TrimStart('@')}"));
 
                 string query = $"INSERT INTO {tableName} ({columns}) VALUES ({values})";
-                return ExecuteNonQuery(query, parameters);
+                return ExecuteNonQuery(query, Local, parameters);
             }
             catch (Exception ex)
             {
@@ -94,14 +102,14 @@ namespace SVUEXAM
         }
 
         // Simplified method for updating data
-        public static int Update(string tableName, SqlParameter[] parameters, string whereClause)
+        public static int Update(string tableName, SqlParameter[] parameters, string whereClause, bool Local)
         {
             try
             {
                 string setClause = string.Join(", ", parameters.Select(p => $"{p.ParameterName.TrimStart('@')} = @{p.ParameterName.TrimStart('@')}"));
                 string query = $"UPDATE {tableName} SET {setClause} WHERE {whereClause}";
 
-                return ExecuteNonQuery(query, parameters);
+                return ExecuteNonQuery(query, Local, parameters);
             }
             catch (Exception ex)
             {
@@ -111,12 +119,12 @@ namespace SVUEXAM
         }
 
         // Simplified method for deleting data
-        public static int Delete(string tableName, string whereClause, params SqlParameter[] parameters)
+        public static int Delete(string tableName, string whereClause, bool Local, params SqlParameter[] parameters)
         {
             try
             {
                 string query = $"DELETE FROM {tableName} WHERE {whereClause}";
-                return ExecuteNonQuery(query, parameters);
+                return ExecuteNonQuery(query, Local, parameters);
             }
             catch (Exception ex)
             {

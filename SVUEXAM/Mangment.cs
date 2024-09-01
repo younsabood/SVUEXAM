@@ -12,7 +12,17 @@ namespace SVUEXAM
     {
         public static void Exit()
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to exit? Please save any unsaved changes before exiting.",
+                "Exit Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
         public static void Show_and_Hide(Form f1, Form f2)
         {

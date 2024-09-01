@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Const.cs" />
     <Compile Include="GetData.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -83,6 +84,12 @@
     <Compile Include="Subject.Designer.cs">
       <DependentUpon>Subject.cs</DependentUpon>
     </Compile>
+    <Compile Include="TabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl.Designer.cs">
+      <DependentUpon>TabControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subject.resx">
       <DependentUpon>Subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl.resx">
+      <DependentUpon>TabControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -148,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image-upscaled-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

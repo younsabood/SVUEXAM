@@ -8,6 +8,12 @@ namespace SVUEXAM
 {
     internal class GetData
     {
+        public static TabControl MajorControl()
+        {
+            TabControl tabControl = new TabControl("Bait", "IIS202");
+
+            return tabControl;
+        }
 
     }
 }

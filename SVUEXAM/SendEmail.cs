@@ -9,6 +9,7 @@ namespace SVUEXAM
 {
     internal class SendEmail
     {
+        public static string verificationCode;
         public static async Task SendAsync(string recipientName, string recipientEmail)
         {
             try
@@ -19,7 +20,7 @@ namespace SVUEXAM
                     client.EnableSsl = true;
 
                     // Generate a random verification code
-                    string verificationCode = GenerateVerificationCode();
+                    verificationCode = GenerateVerificationCode();
                     DateTime expirationTime = DateTime.Now.AddMinutes(2); // Code expires in 2 minutes
                     string dateTimeNow = DateTime.Now.ToString("yyyy/MM/dd HH:mm");
                     string expirationTimeStr = expirationTime.ToString("yyyy/MM/dd HH:mm");

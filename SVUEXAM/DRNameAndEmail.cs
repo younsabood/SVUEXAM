@@ -33,5 +33,17 @@ namespace SVUEXAM
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void VerificationCode_TextChanged(object sender, EventArgs e)
+        {
+            if (VerificationCode.Text == SendEmail.verificationCode)
+            {
+                VerificationCode.IconRight = Properties.Resources.correctIcon;
+            }
+            else
+            {
+                VerificationCode.IconRight = null;
+            }
+        }
     }
 }

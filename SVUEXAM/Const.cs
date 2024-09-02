@@ -22,7 +22,9 @@ namespace SVUEXAM
             Color.Purple, Color.Brown, Color.Cyan, Color.Magenta, Color.Lime, Color.Silver,
             Color.Maroon, Color.Olive, Color.Teal, Color.Navy, Color.Gold, Color.Coral,
             Color.Tomato, Color.Khaki, Color.Plum, Color.Salmon, Color.SeaGreen, Color.Sienna,
-            Color.SkyBlue, Color.Turquoise, Color.Violet
+            Color.SkyBlue, Color.Turquoise, Color.Violet,
+            Color.DarkSlateGray 
         };
+
     }
 }

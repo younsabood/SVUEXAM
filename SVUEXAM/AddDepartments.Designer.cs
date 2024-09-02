@@ -53,9 +53,9 @@
             // DepName
             // 
             this.DepName.AutoSize = true;
-            this.DepName.BackColor = System.Drawing.Color.Transparent;
+            this.DepName.BackColor = System.Drawing.Color.White;
             this.DepName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DepName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DepName.ForeColor = System.Drawing.Color.Black;
             this.DepName.Location = new System.Drawing.Point(2, 2);
             this.DepName.Margin = new System.Windows.Forms.Padding(0);
             this.DepName.Name = "DepName";

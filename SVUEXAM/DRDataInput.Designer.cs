@@ -44,7 +44,7 @@
             this.contenar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenar.Location = new System.Drawing.Point(0, 0);
             this.contenar.Name = "contenar";
-            this.contenar.Size = new System.Drawing.Size(1186, 638);
+            this.contenar.Size = new System.Drawing.Size(1263, 746);
             this.contenar.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -55,12 +55,12 @@
             this.tableLayoutPanel2.Controls.Add(this.Next, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.Previous, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 572);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 680);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1186, 66);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1263, 66);
             this.tableLayoutPanel2.TabIndex = 11;
             // 
             // Next
@@ -75,7 +75,7 @@
             this.Next.ImageOffset = new System.Drawing.Point(0, 0);
             this.Next.ImageRotate = 0F;
             this.Next.ImageSize = new System.Drawing.Size(50, 50);
-            this.Next.Location = new System.Drawing.Point(618, 3);
+            this.Next.Location = new System.Drawing.Point(656, 3);
             this.Next.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
             this.Next.Name = "Next";
             this.Next.PressedState.ImageSize = new System.Drawing.Size(50, 50);
@@ -95,7 +95,7 @@
             this.Previous.ImageOffset = new System.Drawing.Point(0, 0);
             this.Previous.ImageRotate = 0F;
             this.Previous.ImageSize = new System.Drawing.Size(50, 50);
-            this.Previous.Location = new System.Drawing.Point(518, 3);
+            this.Previous.Location = new System.Drawing.Point(556, 3);
             this.Previous.Margin = new System.Windows.Forms.Padding(3, 3, 25, 3);
             this.Previous.Name = "Previous";
             this.Previous.PressedState.ImageSize = new System.Drawing.Size(50, 50);
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 638);
+            this.ClientSize = new System.Drawing.Size(1263, 746);
             this.Controls.Add(this.contenar);
             this.Name = "DRDataInput";
             this.Text = "DRDataInput";

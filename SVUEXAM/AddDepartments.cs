@@ -27,7 +27,6 @@ namespace SVUEXAM
                 // Deselect
                 isSelected = false;
                 box.BackColor = Const.colors[Const.names.IndexOf(DepName.Text)]; // Reset to original color
-                DepName.ForeColor = Color.WhiteSmoke;
 
                 // Remove from the list if unselected
                 if (Departments.selectedDepartments.Contains(DepName.Text))
@@ -41,7 +40,6 @@ namespace SVUEXAM
                 // Select
                 isSelected = true;
                 box.BackColor = Color.Blue; // Set selected color
-                DepName.ForeColor = Color.White;
 
                 // Add to the list if selected
                 if (!Departments.selectedDepartments.Contains(DepName.Text))
@@ -58,7 +56,6 @@ namespace SVUEXAM
             if (!isSelected)
             {
                 box.BackColor = Color.LightBlue; // Optional: Different color on hover/enter
-                DepName.ForeColor = Color.White;
             }
         }
 
@@ -68,13 +65,11 @@ namespace SVUEXAM
             if (isSelected)
             {
                 box.BackColor = Color.Blue; // Keep selected color
-                DepName.ForeColor = Color.White;
             }
             else
             {
                 // Revert to original color if not selected
                 box.BackColor = Const.colors[Const.names.IndexOf(DepName.Text)];
-                DepName.ForeColor = Color.WhiteSmoke;
             }
         }
     }

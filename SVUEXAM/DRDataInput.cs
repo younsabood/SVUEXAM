@@ -92,6 +92,7 @@ namespace SVUEXAM
             else if (pageID == 3)
             {
                 contenar.Controls.Add(professorCourse);
+                professorCourse.InitializeDepartments();
             }
         }
 

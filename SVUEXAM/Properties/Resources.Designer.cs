@@ -63,6 +63,16 @@ namespace SVUEXAM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap correctIcon {
+            get {
+                object obj = ResourceManager.GetObject("correctIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exam_concept_examination_online_test_answer_checklist_student_collage_flat_illustration_vector_banner_128772_1800 {
             get {
                 object obj = ResourceManager.GetObject("exam-concept-examination-online-test-answer-checklist-student-collage-flat-illust" +

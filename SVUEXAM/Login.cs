@@ -42,7 +42,7 @@ namespace SVUEXAM
             new SqlParameter("@Username", SqlDbType.NVarChar) { Value = username },
             new SqlParameter("@PasswordHash", SqlDbType.NVarChar) { Value = passwordHash }};
 
-            DataTable userTable = await SQL.ExecuteQueryAsync(query, parameters);
+            DataTable userTable = await SQL.ExecuteQueryAsync(query,false ,parameters);
 
             if (userTable != null && userTable.Rows.Count == 1)
             {

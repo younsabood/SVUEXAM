@@ -16,7 +16,7 @@ namespace SVUEXAM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Subject("youns"));
+            Application.Run(new DRDataInput());
         }
     }
 }

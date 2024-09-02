@@ -88,14 +88,20 @@ namespace SVUEXAM
                 );
             }
         }
-
-        // Method to generate a random verification code
         private static string GenerateVerificationCode()
         {
             Random random = new Random();
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            return new string(Enumerable.Repeat(chars, 6)
-              .Select(s => s[random.Next(s.Length)]).ToArray());
+            const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const string numbers = "0123456789";
+
+            char[] code = new char[6];
+
+            for (int i = 0; i < 6; i++)
+            {
+                code[i] = i < 3 ? letters[random.Next(letters.Length)] : numbers[random.Next(numbers.Length)];
+            }
+            return new string(code.OrderBy(c => random.Next()).ToArray());
         }
+
     }
 }

@@ -74,7 +74,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDepartments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddDepartments.Designer.cs">
+      <DependentUpon>AddDepartments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Const.cs" />
+    <Compile Include="Departments.cs" />
     <Compile Include="DRDataInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +137,9 @@
     <Compile Include="TabControl.Designer.cs">
       <DependentUpon>TabControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddDepartments.resx">
+      <DependentUpon>AddDepartments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DRDataInput.resx">
       <DependentUpon>DRDataInput.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfessorCourse.resx">
+      <DependentUpon>ProfessorCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfessorDepartment.resx">
       <DependentUpon>ProfessorDepartment.cs</DependentUpon>
